@@ -4,26 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login/Sign up</title>
+    <title>Blogs</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
+     
     <div class="fondo">
-        <div class="caja-datos">
-            <div class="caja-boton">
-                <div id="btn">
+        <!-- Secciones de ingreso -->
+        <div id="wrapper">
+            <div class="division-datos"> 
+                <h1 class="slogan">Comparte tus ideas</h1>
+                <form class="ingreso-datos">
+                    <input type="text" class="ingreso-lugar" placeholder="Usuario" required>  
+                    <input type="text" class="ingreso-lugar" placeholder="Contraseña" required>
+                    <input type="checkbox" class="check-box"><span style="color: whitesmoke;">Mantener sesion</span>
+                    <button type="submit" class="ingresar-btn">Ingresar</button>
+                </form>
+
+                <div class="registrate">
+                    <p class="texto-registro">No tienes cuenta? <a id="linkModal" class="linkModal" style="color: gray; cursor: pointer;">Registrate!</a></p>
 
                 </div>
-                <button type="button" class="boton-cambio">Inicia sesion</button>
-                <button type="button" class="boton-cambio">Registrate</button>
+                <div class="botonModal">
+                     <!-- <button class="boton-modal-contenido">Aquiiiiiiiiiiiiii</button> -->
+
+                </div>
             </div>
-            <form class="ingreso-datos">
-                <input type="text" class="ingreso-lugar" placeholder="Usuario" required>  
-                <input type="text" class="ingreso-lugar" placeholder="Contraseña" required>
-                <input type="checkbox" class="check-box"><span>Mantener sesion</span>
-                <button type="submit" class="ingresar-btn">Ingresar</button>
-            </form>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div id="registroModal" class="modal">
+        <div class="contenido-modal">
+            <!-- <button class="registrar-btn">Registrate</button> -->
+            <div class="modal-header">
+                <span class="closeBtn">&times;</span>
+                <h1>Datos de registro</h1>
+            </div>
+
+            <div class="modal-body">
+                <input type="text" class="md-Name" placeholder="Nombre/s"><br/>
+                <input type="text" class="md-Name" placeholder="Apellido/s"><br/>
+                <input type="date" class="md-Name" placeholder="FEcha de nacimiento"><br/>
+                <input type="email" class="md-Name" placeholder="Email"><br/>
+                <input type="file" class="md-Name" placeholder="Foto de perfil"><br/>
+                <input type="text" class="md-Name" placeholder="Nombre de usuario"><br/>
+                <input type="text" class="md-Name" placeholder="Contraseña"><br/>
+            </div>
+            <div class="modal-footer">
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Tu Blog Personal&reg;</p>
+      </div>
+    <script src="main.js"></script>
 </body>
+
 </html>

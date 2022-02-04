@@ -9,52 +9,35 @@
     background-image:linear-gradient(
     rgba(0,0,0,0.4), 
     rgba(0,0,0,0.4)), 
-    url(./img/184279_after.jpeg);
+    url(./img/mountains-gc28116aa2_1920.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
 }
 
-.caja-datos{
-    width: 380px;
-    height: 480px;
-    position: relative;
-    margin: 6% auto;
-    background: #fff;
-    padding: 5px;
-}
-
-.caja-boton{
-    width: 320px;
-    margin: 50px auto;
-    position: relative;
-    box-shadow: 0 0 20px 9px #ff61241f;
-    border-radius: 40px;
-}
-
-.boton-cambio{
-    padding: 10px 30px;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-    outline: none;
-    position:relative;
-    font-size: 17px;
-}
-
-#btn{
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 155px;
+/* La division entre el fondo y la caja blanca */
+.division-datos{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 580px;
     height: 100%;
-    background: linear-gradient(to right, #c52b5e, #7451f3);
-    border-radius: 30px;
-    transition: .5s;
+    position: absolute;
+    margin:0;
+    padding: 0;
+    background: rgba(22, 22, 22, 0.7) ;
+}
+
+
+/* Lo que esta dentro de la caja transparente */
+.slogan{
+    top: 250px;
+    left: 100px;
+    position: absolute;
+    color: aliceblue;
 }
 
 .ingreso-datos{
-    top: 180px;
+    left: 130px;
+    top: 350px;
     position: absolute;
     width: 280px;
     transition: .5s;
@@ -62,14 +45,15 @@
 
 .ingreso-lugar{
     width: 100%;
-    padding: 10px 0;
-    margin: 5px 0;
+    padding: 5px 0;
+    margin: 15px 0;
     border-left: 0;
     border-top: 0;
     border-right: 0;
     border-bottom: 1px solid rgb(174, 50, 231);
-    outline: none;
-    background: transparent;
+    outline: ridge;
+    background: whitesmoke;
+    opacity: 0.4;
 }
 
 .ingresar-btn{
@@ -86,9 +70,89 @@
 }
 
 .check-box{
-    margin: 30px 10px 30px 0;
+    color: whitesmoke;
+    margin: 20px 33px;
+    text-align: center;
 }
 
-span{
-    color:
+.registrate{
+    color: whitesmoke;
+    top: 600px;
+    left: 130px;
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.texto-registro{
+    
+}
+
+
+/* Footer */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(105, 104, 104);
+    color: white;
+    text-align: center;
+  }
+
+  /* Modal */
+.linkModal{
+
+}
+
+.botonModal{
+    top : 600px;
+    left: 300px;
+    position: absolute;
+    opacity: 0;
+    
+}
+
+.boton-modal-contenido{
+    cursor: pointer;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.contenido-modal{
+    background-color: #f4f4f4;
+    margin: 10% auto;
+    padding: 20px;
+    width: 40%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+
+@keyframes modalopen{
+    from{opacity: 0}
+    to{opacity: 1}
+}
+
+.closeBtn{
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+      
+}
+
+.closeBtn:hover, .closeBtn:focus{
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
 }

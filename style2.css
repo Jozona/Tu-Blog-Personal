@@ -1,0 +1,38 @@
+#separado {
+    padding-left: 15px;
+    letter-spacing: 42px;
+    border: 0;
+    background-image: linear-gradient(to left, black 70%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 50px 1px;
+    background-repeat: repeat-x;
+    background-position-x: 35px;
+    width: 220px;
+    outline : none;
+  }
+
+  .md-Name{
+    margin: 15px 0;
+    padding: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgb(147, 156, 62);
+  }
+
+.registrar-btn{
+    width: 10%;
+    padding: 10px 30px;
+    left:600px;
+    top: 470px;
+    cursor: pointer;
+    display: block;
+    margin:auto;
+    background: linear-gradient(to right, #B03200, #00B395);
+    border:0;
+    border-radius: 40px;
+    outline: 0;
+    transition: .5s;
+    position: absolute;
+
+}
