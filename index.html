@@ -15,7 +15,9 @@
         <div id="wrapper">
             <div class="division-datos"> 
                 <h1 class="slogan">Comparte tus ideas</h1>
-                <form class="ingreso-datos">
+                <img src="./img/1.png" height="700px" width="600px"     id="imagen-linea" alt="mountain.">
+                <form class="ingreso-datos" >
+                    
                     <input type="text" class="ingreso-lugar" placeholder="Usuario" required>  
                     <input type="text" class="ingreso-lugar" placeholder="Contraseña" required>
                     <input type="checkbox" class="check-box"><span style="color: whitesmoke;">Mantener sesion</span>
@@ -33,7 +35,10 @@
             </div>
         </div>
     </div>
-
+    <div class="bienvenido">
+    
+    <img src="./img/CLEG 2.png" height="600px" width="600px" alt="cle">
+    </div>
     <!-- Modal -->
     <div id="registroModal" class="modal">
         <div class="contenido-modal">
@@ -43,15 +48,18 @@
                 <h1>Datos de registro</h1>
             </div>
 
-            <div class="modal-body">
-                <input type="text" class="md-Name" placeholder="Nombre/s"><br/>
-                <input type="text" class="md-Name" placeholder="Apellido/s"><br/>
-                <input type="date" class="md-Name" placeholder="FEcha de nacimiento"><br/>
-                <input type="email" class="md-Name" placeholder="Email"><br/>
-                <input type="file" class="md-Name" placeholder="Foto de perfil"><br/>
-                <input type="text" class="md-Name" placeholder="Nombre de usuario"><br/>
-                <input type="text" class="md-Name" placeholder="Contraseña"><br/>
-            </div>
+            <form class="modal-body">
+                
+                <input type="text" class="md-Name" placeholder="Nombre/s" required><br/>
+                <input type="text" class="md-Name" placeholder="Apellido/s" required><br/>
+                <input type="date" class="md-Name" placeholder="FEcha de nacimiento" required><br/>
+                <input type="email" class="md-Name" placeholder="Email" required><br/>
+                <input type="file" class="md-Name" placeholder="Foto de perfil" required><br/>
+                <input type="text" class="md-Name" placeholder="Nombre de usuario" required><br/>
+                <input type="text" class="md-Name" placeholder="Contraseña" required><br/>
+                <button type="registrar">Registrarse</button>
+            </form>
+            
             <div class="modal-footer">
                 
             </div>

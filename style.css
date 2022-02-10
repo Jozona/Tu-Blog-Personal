@@ -35,13 +35,24 @@
     color: aliceblue;
 }
 
+
+#imagen-linea{
+    
+    position: relative;
+    top: 20px;
+    left: -25px;
+    bottom: auto;
+    
+}
+
 .ingreso-datos{
     left: 130px;
-    top: 350px;
+    top: 300px;
     position: absolute;
     width: 280px;
     transition: .5s;
 }
+
 
 .ingreso-lugar{
     width: 100%;
@@ -87,6 +98,17 @@
 .texto-registro{
     
 }
+
+.bienvenido{
+    top: 150px;
+    left: 900px;
+    position: absolute;
+    color: aliceblue;
+
+}
+
+
+
 
 
 /* Footer */
