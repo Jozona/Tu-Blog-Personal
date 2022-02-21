@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs</title>
+    <script src="https://kit.fontawesome.com/f7f51c8d09.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style2.css">
+
 </head>
 <body>
      
@@ -14,8 +16,8 @@
         <!-- Secciones de ingreso -->
         <div id="wrapper">
             <div class="division-datos"> 
-                <h1 class="slogan">Comparte tus ideas</h1>
-                <img src="./img/1.png" height="700px" width="600px"     id="imagen-linea" alt="mountain.">
+                <h1 style="padding-left: 50px; margin-bottom: 1000px;" class="slogan">Inicia sesion</h1>
+               
                 <form class="ingreso-datos" >
                     
                     <input type="text" class="ingreso-lugar" placeholder="Usuario" required>  
@@ -48,16 +50,51 @@
                 <h1>Datos de registro</h1>
             </div>
 
-            <form class="modal-body">
+            <form class="modal-body" id="form-registro">
+                <div class="estilo-input ">
+                    <input id="nombre" type="text" class="md-Name" placeholder="Nombre/s" required><br/>
+                    <i class="fas fa-check-circle"></i>
+			        <i class="fas fa-exclamation-circle"></i>
+                    <small>Error</small>
+                </div>
+                <div class="estilo-input ">
+                    <input id="apellido" type="text" class="md-Name" placeholder="Apellido/s" required><br/>
+                    <i class="fas fa-check-circle"></i>
+			        <i class="fas fa-exclamation-circle"></i>
+                    <small>Error</small>
+                </div>
+                <div class="estilo-input">
+                    <input id="nacimiento" type="date" class="md-Name" placeholder="Fecha de nacimiento" required><br/>
+                    <i class="fas fa-check-circle"></i>
+			        <i class="fas fa-exclamation-circle"></i>
+                    <small>Error</small>
+                </div>
+                <div class="estilo-input">
+                    <input id="correo" type="email" class="md-Name" placeholder="Email" required><br/>
+                    <i class="fas fa-check-circle"></i>
+			        <i class="fas fa-exclamation-circle"></i>
+                    <small>Error</small>
+                </div>
+                <div class="estilo-input">
+                    <input id="fotoPerfil" type="file" class="md-Name" placeholder="Foto de perfil" required><br/>
+                    <i class="fas fa-check-circle"></i>
+			        <i class="fas fa-exclamation-circle"></i>
+                    <small>Error</small>
+                </div>
+                <div class="estilo-input">
+                    <input id="username" type="text" class="md-Name" placeholder="Nombre de usuario" required><br/>
+                    <i class="fas fa-check-circle"></i>
+			        <i class="fas fa-exclamation-circle"></i>
+                    <small>Error</small>
+                </div>
+                <div class="estilo-input">
+                    <input id="password" type="text" class="md-Name" placeholder="Contraseña" required><br/>
+                    <i class="fas fa-check-circle"></i>
+			        <i class="fas fa-exclamation-circle"></i>
+                    <small>Error</small>
+                </div>
                 
-                <input type="text" class="md-Name" placeholder="Nombre/s" required><br/>
-                <input type="text" class="md-Name" placeholder="Apellido/s" required><br/>
-                <input type="date" class="md-Name" placeholder="FEcha de nacimiento" required><br/>
-                <input type="email" class="md-Name" placeholder="Email" required><br/>
-                <input type="file" class="md-Name" placeholder="Foto de perfil" required><br/>
-                <input type="text" class="md-Name" placeholder="Nombre de usuario" required><br/>
-                <input type="text" class="md-Name" placeholder="Contraseña" required><br/>
-                <button type="registrar">Registrar</button>
+                <button type="registrar" class="btn-modal">Confirmar</button>
             </form>
             
             <div class="modal-footer">

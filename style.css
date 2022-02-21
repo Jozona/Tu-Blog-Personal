@@ -95,10 +95,6 @@
     
 }
 
-.texto-registro{
-    
-}
-
 .bienvenido{
     top: 150px;
     left: 900px;
@@ -123,8 +119,8 @@
   }
 
   /* Modal */
-.linkModal{
-
+.modal-header{
+    text-align: center;
 }
 
 .botonModal{
@@ -147,25 +143,31 @@
     top: 0;
     height: 100%;
     width: 100%;
-    overflow: auto;
+    overflow:hidden;
     background-color: rgba(0,0,0,0.6);
+    border-radius: 25px;
 }
 
+
+/* Como se ven los campos de input para registrarse */
 .contenido-modal{
     background-color: #f4f4f4;
-    margin: 10% auto;
+    margin: 4% auto;
     padding: 20px;
-    width: 40%;
+    width: 30%;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
     animation-name: modalopen;
     animation-duration: 1s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Animacion de entrada para el modal de registro */
 @keyframes modalopen{
     from{opacity: 0}
     to{opacity: 1}
 }
 
+/* Cerrar el modal */
 .closeBtn{
     color: #ccc;
     float: right;
@@ -177,4 +179,31 @@
     cursor: pointer;
     color: black;
     text-decoration: none;
+}
+
+.modal-body{
+    padding-bottom: 1px;
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+      
+}
+
+/* Boton para confirmar registro */
+.btn-modal{
+    width: 40%;
+    padding: 8px 25px;
+    cursor: pointer;
+    display: block;
+    margin:auto;
+    background: linear-gradient(to right, #B03200, #00B395);
+    border:0;
+    border-radius: 40px;
+    outline: 0;
+    transition: .5s;
+    color: rgb(209, 203, 203);
+}
+/* Que todo dentro del modal use la familia de fonts */
+.modal{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
