@@ -32,6 +32,7 @@ const correo = document.getElementById('correo');
 const fotoPerfil = document.getElementById('fotoPerfil');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
+const password2 = document.getElementById('password2');
 const btnConfirmarRegs= document.getElementById('btnConfirmarRegs');
 
 form.addEventListener('submit', e => {
@@ -40,35 +41,170 @@ form.addEventListener('submit', e => {
 	checkInputs();
 });
 
+var correcto = true;
 function checkInputs() {
-	// trim to remove the whitespaces
-    const nombreValor = username.value.trim();
-    const apellidoValor = username.value.trim();
-    const nacimientoValor = username.value.trim();
-    const correoValor = username.value.trim();
-    const usernameValue = username.value.trim();
-	const usernameValue = username.value.trim();
-	const emailValue = email.value.trim();
-	const passwordValue = password.value.trim();
-	
-	if(usernameValue === '') {
-		setErrorFor(username, 'Username cannot be blank');
+	//Checamos los valores individualmente
+    const nombreValor = nombre.value.trim();
+    const apellidoValor = apellido.value.trim();
+    const nacimientoValor = nacimiento.value.trim();
+    const correoValor = correo.value.trim();
+    const fotoPerfilValor = fotoPerfil.value.trim();
+	const usernameValor = username.value.trim();
+	const passwordValor = password.value.trim();
+    const passwordConfirmarValor = password2.value.trim();
+
+    if(nombreValor === '') {
+		setErrorFor(nombre, 'Escribe tu nombre');
+        correcto = false;
+	} else if (!esNombre(nombreValor)) {
+		setErrorFor(nombre, 'Nombre invalido');
+        correcto = false;
 	} else {
+		setSuccessFor(nombre);
+	}
+
+    if(apellidoValor === '') {
+		setErrorFor(apellido, 'Escribe tus apellidos');
+        correcto = false;
+	} else if(!esApellido(apellidoValor)) {
+        setErrorFor(apellido, 'Apellido invalido');
+        correcto = false;
+    }
+    else {
+		setSuccessFor(apellido);
+	}
+
+    if(nacimientoValor === '') {
+		setErrorFor(nacimiento, 'Escoge una fecha de nacimiento');
+        correcto = false;
+	} else if(!esNacimiento(nacimientoValor)) {
+        setErrorFor(nacimiento, 'Fecha de nacimiento invalida');
+        correcto = false;
+    }else {
+		setSuccessFor(nacimiento);
+	}
+
+	if(correoValor === '') {
+		setErrorFor(correo, 'Correo no puede estar en blanco');
+        correcto = false;
+	} else if (!esCorreo(correoValor)) {
+		setErrorFor(correo, 'Correo invalido');
+        correcto = false;
+	} else {
+		setSuccessFor(correo);
+	}
+
+    if(fotoPerfilValor === '') {
+		setErrorFor(fotoPerfil, 'Una foto de perfil es necesaria');
+        correcto = false;
+	} else if (!esFoto(fotoPerfilValor)) {
+		setErrorFor(fotoPerfil, 'Foto invalida');
+        correcto = false;
+	} else {
+		setSuccessFor(fotoPerfil);
+	}
+
+    if(usernameValor === '') {
+		setErrorFor(username, 'Usuario no puede estar en blanco');
+        correcto = false;
+	} else if(!esUsername(usernameValor)) {
+        setErrorFor(username, 'Nombre de usuario invalido');
+        correcto = false;
+    }else {
 		setSuccessFor(username);
 	}
 	
-	if(emailValue === '') {
-		setErrorFor(email, 'Email cannot be blank');
-	} else if (!isEmail(emailValue)) {
-		setErrorFor(email, 'Not a valid email');
-	} else {
-		setSuccessFor(email);
-	}
-	
-	if(passwordValue === '') {
-		setErrorFor(password, 'Password cannot be blank');
-	} else {
+	if(passwordValor === '') {
+		setErrorFor(password, 'Contraseña no puede estar en blanco');
+        correcto = false;
+	}else if (!esContra(passwordValor)) {
+		setErrorFor(password, 'La contraseña necesita: 8 caracteres, 1 letra mayuscula, 1 letra minuscula, 1 numero, 1 signo de puntuacion');
+        correcto = false;
+    } else {
 		setSuccessFor(password);
 	}
-	
+
+    if(passwordConfirmarValor === '') {
+		setErrorFor(password2, 'Contraseña no puede estar en blanco');
+        correcto = false;
+	}else if (!esContra(passwordConfirmarValor)) {
+		setErrorFor(password2, 'Contraseña invalida');
+        correcto = false;
+	}else if(passwordConfirmarValor != passwordValor){
+        setErrorFor(password2, 'Contraseña no coincide');
+        correcto = false;
+    }
+    else {
+		setSuccessFor(password2);
+	}
+
+    if(correcto){
+        alert("Has sido registrado.");
+        window.location.reload(); 
+    }
+    correcto = true;
 }
+
+//Cambiar aparencia de seccion de input
+function setSuccessFor(input) {
+	const formControl = input.parentElement;
+	formControl.className = 'estilo-input success';
+}
+
+//Cambiar aparencia si el input es incorrecto
+function setErrorFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'estilo-input error';
+	small.innerText = message;
+} 
+
+// Funciones que verifican los inputs
+
+//Checar correo
+function esCorreo(correo) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(correo);
+}
+
+function esNombre(input){
+    return /^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/ .test(input); 
+}
+
+function esApellido(input){
+    return /^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/ .test(input); 
+}
+
+function esNacimiento(input){
+    return true;
+}
+
+
+let regexContra = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})')
+function esContra(input){
+    return regexContra.test(input);
+}
+
+function esUsername(input){
+    return true;
+}
+
+function esFoto(input){
+    return true;
+}
+
+//Checar fecha 
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //January is 0!
+var yyyy = today.getFullYear();
+
+if (dd < 10) {
+   dd = '0' + dd;
+}
+
+if (mm < 10) {
+   mm = '0' + mm;
+} 
+    
+today = yyyy + '-' + mm + '-' + dd;
+document.getElementById("nacimiento").setAttribute("max", today);

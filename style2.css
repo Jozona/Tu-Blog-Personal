@@ -101,6 +101,11 @@
 	visibility: visible;
 }
 
+.requisitosPass{
+  margin-top: 120px;
+  font-size: 14px;
+
+}
 
 .estilo-input i {
 	visibility: hidden;
